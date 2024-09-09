@@ -76,6 +76,7 @@ export const routesPOST = [
         url: "/storage_block/boxes/add_item", responce: (req, resp) => {
             const jsonItem = req.body;
             jsonItem["id"]=idIncrement;
+            jsonItem['z']=0;
             idIncrement++;
             //TODO need validator
             objectsAtDatabase.push(jsonItem);
